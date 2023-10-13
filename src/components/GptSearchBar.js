@@ -35,7 +35,7 @@ const GptSearchBar = () => {
       //Handle Errors
     }
 
-    console.log(gptResults.choices);
+  
     const gptMovies = gptResults.choices[0].message.content.split(",");
 
     //For each movies I will search TMDB Api call
@@ -44,7 +44,7 @@ const GptSearchBar = () => {
 
     const tmdbResults = await Promise.all(promiseArray);
 
-    console.log(tmdbResults)
+  
     dispatch(addGptMovieResult({movieNames : gptMovies, movieResults: tmdbResults}))
     
 

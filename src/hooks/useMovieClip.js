@@ -8,7 +8,7 @@ import { addClipVideo } from "../utils/redux/movieSlice";
 const useMovieClip = (movieId) => {
 
     const dispatch = useDispatch();
-    // console.log(movieId,'movieClip')
+   
 
     const getMovieClip = async () => {
         const responce = await fetch(
@@ -16,12 +16,12 @@ const useMovieClip = (movieId) => {
             API_OPTIONS
           );
           const data = await responce.json();
-          console.log(data,'data')
+        
             
           const filteredData = data.results?.filter(
             (video) => video.type === "Clip"
           );
-          console.log(filteredData,'filterData');
+         
             
           const clip = filteredData?.length > 0 ? filteredData[0] : data?.results[0];
             // const clip = data?.results[0]

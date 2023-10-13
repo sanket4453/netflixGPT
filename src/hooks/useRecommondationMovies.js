@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 const useRecommondationMovies = (movie_id) => {
     const dispatch = useDispatch();
-    console.log(movie_id)
+  
 
     const recommondationMovies = useSelector((store) => store.movie.recommondationMovies)
 
@@ -17,7 +17,7 @@ const useRecommondationMovies = (movie_id) => {
             API_OPTIONS
           );
           const data = await responce.json();
-          console.log(data,'recommondation')
+       
         
           dispatch(addRecommondationMovies(data?.results));
     

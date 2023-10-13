@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import GptSearchBar from './GptSearchBar'
 import GptMovieSuggestions from './GptMovieSuggestions'
 import { BG_IMG } from '../utils/constant'
+import { useDispatch } from 'react-redux'
+import { addGptMovieResult } from '../utils/redux/gptSlice'
 
 const GptSearch = () => {
+
+  
+ 
   return (
     <>
      <div className="fixed -z-10 md:w-full">
