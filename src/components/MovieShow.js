@@ -30,7 +30,7 @@ const MovieShow = () => {
         ></iframe>
       </div>
       <div>
-       { movies.recommondationMovies.length && <MovieList title={"Recommondation"} movies={movies.recommondationMovies} />}
+       { movies?.recommondationMovies?.length && <MovieList title={"Recommondation"} movies={movies.recommondationMovies} />}
         {/* <MovieList title={"Popular"} movies={movies.popularMovies} /> */}
          <MovieList title={"Top Rated"} movies={movies.topRatedMovies} />
       </div>
